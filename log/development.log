@@ -173,3 +173,1017 @@ Filter chain halted as :authenticate_token rendered or redirected
 Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-09-19 16:02:08 -0500
+  [1m[35m (17.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/brookebaxa/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/brookebaxa/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (4.5ms)
+Completed 200 OK in 32ms (Views: 27.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-09-19 16:02:12 -0500
+Processing by UsersController#index as HTML
+Filter chain halted as :authenticate_token rendered or redirected
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2017-09-19 16:02:12 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-09-19 16:02:19 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/brookebaxa/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/brookebaxa/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (2.4ms)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-19 16:14:25 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 98ms (Views: 0.6ms | ActiveRecord: 5.5ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-19 16:23:41 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 68ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-19 16:23:53 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 71ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-19 16:23:55 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 65ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-19 17:23:58 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 66ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-19 17:23:59 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 71ms (Views: 0.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-19 17:24:47 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (33.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 102ms (Views: 0.9ms | ActiveRecord: 33.8ms)
+
+
+Started GET "//users" for 127.0.0.1 at 2017-09-19 17:25:23 -0500
+Processing by UsersController#index as HTML
+Filter chain halted as :authenticate_token rendered or redirected
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-19 17:25:31 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 68ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "//users" for 127.0.0.1 at 2017-09-19 17:25:33 -0500
+Processing by UsersController#index as HTML
+Filter chain halted as :authenticate_token rendered or redirected
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "//users" for 127.0.0.1 at 2017-09-19 19:27:42 -0500
+Processing by UsersController#index as HTML
+Filter chain halted as :authenticate_token rendered or redirected
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-19 19:27:47 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 71ms (Views: 1.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-19 19:31:42 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 90ms (Views: 0.6ms | ActiveRecord: 6.8ms)
+
+
+Started GET "//users" for 127.0.0.1 at 2017-09-19 19:31:44 -0500
+Processing by UsersController#index as HTML
+Filter chain halted as :authenticate_token rendered or redirected
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-19 19:35:58 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 70ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "//users" for 127.0.0.1 at 2017-09-19 19:36:04 -0500
+Processing by UsersController#index as HTML
+Filter chain halted as :authenticate_token rendered or redirected
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-19 19:36:47 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 70ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "//users" for 127.0.0.1 at 2017-09-19 19:36:49 -0500
+Processing by UsersController#index as HTML
+Filter chain halted as :authenticate_token rendered or redirected
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "//users" for 127.0.0.1 at 2017-09-19 19:36:54 -0500
+Processing by UsersController#index as HTML
+Filter chain halted as :authenticate_token rendered or redirected
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-09-19 19:37:57 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authenticate_token rendered or redirected
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-19 19:40:35 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 78ms (Views: 1.0ms | ActiveRecord: 3.6ms)
+
+
+Started GET "//users" for 127.0.0.1 at 2017-09-19 19:40:37 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-19 19:42:03 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 75ms (Views: 0.5ms | ActiveRecord: 3.5ms)
+
+
+Started GET "//users" for 127.0.0.1 at 2017-09-19 19:42:04 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-19 19:44:58 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 73ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "//users" for 127.0.0.1 at 2017-09-19 19:45:00 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "//users" for 127.0.0.1 at 2017-09-19 19:45:48 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-19 19:45:56 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 63ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "//users" for 127.0.0.1 at 2017-09-19 19:45:58 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-19 19:46:17 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 68ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "//users" for 127.0.0.1 at 2017-09-19 19:46:19 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "//users" for 127.0.0.1 at 2017-09-19 19:47:01 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "//users" for 127.0.0.1 at 2017-09-19 19:47:14 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-19 19:50:12 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 71ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "//users" for 127.0.0.1 at 2017-09-19 19:50:14 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "//users" for 127.0.0.1 at 2017-09-19 20:07:47 -0500
+Processing by UsersController#index as HTML
+Filter chain halted as :authenticate_token rendered or redirected
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-19 20:09:49 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 78ms (Views: 2.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-19 20:26:17 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 79ms (Views: 3.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "//users" for 127.0.0.1 at 2017-09-19 20:27:12 -0500
+Processing by UsersController#index as HTML
+Filter chain halted as :authenticate_token rendered or redirected
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "//users" for 127.0.0.1 at 2017-09-19 20:27:26 -0500
+Processing by UsersController#index as HTML
+Filter chain halted as :authenticate_token rendered or redirected
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-19 20:29:11 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 69ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-19 20:30:14 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 68ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-19 20:30:35 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 68ms (Views: 0.6ms | ActiveRecord: 0.6ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-19 20:32:08 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 69ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-19 20:32:42 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 67ms (Views: 1.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-19 20:38:53 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 65ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-19 20:41:40 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 70ms (Views: 2.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-19 20:42:19 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 67ms (Views: 0.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "//users" for 127.0.0.1 at 2017-09-21 11:57:08 -0500
+Processing by UsersController#index as HTML
+Filter chain halted as :authenticate_token rendered or redirected
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-21 12:02:07 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 69ms (Views: 1.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "//users" for 127.0.0.1 at 2017-09-21 12:07:36 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"test", "password"=>"[FILTERED]"}}
+  [1m[35m (15.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (222.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "test"], ["password_digest", "$2a$10$f26ZSERq71uNNlBjFROIfe2mVlqTiALDhQ9o1iuX37dWO/5lkFbN2"], ["created_at", "2017-09-21 17:07:36.664492"], ["updated_at", "2017-09-21 17:07:36.664492"]]
+  [1m[35m (9.2ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 401ms (Views: 29.5ms | ActiveRecord: 247.4ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-21 12:07:50 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"test", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test"], ["LIMIT", 1]]
+Completed 200 OK in 72ms (Views: 0.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "//users" for 127.0.0.1 at 2017-09-21 12:11:11 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "//users" for 127.0.0.1 at 2017-09-21 12:11:13 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-21 12:11:17 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"test", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test"], ["LIMIT", 1]]
+Completed 200 OK in 70ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "//users" for 127.0.0.1 at 2017-09-21 12:11:21 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "//users" for 127.0.0.1 at 2017-09-21 12:14:09 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/Users/brookebaxa/dev/voveo/voveo_backend/voveo-api/app/controllers/users_controller.rb:34: syntax error, unexpected '}', expecting =>
+: token, user: user, :created}
+                              ^):
+  
+app/controllers/users_controller.rb:34: syntax error, unexpected '}', expecting =>
+Started POST "//users" for 127.0.0.1 at 2017-09-21 12:15:18 -0500
+Started POST "//users" for 127.0.0.1 at 2017-09-21 12:15:28 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"test1", "password"=>"[FILTERED]"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "test1"], ["password_digest", "$2a$10$8.Z4miTG3CxpOjqDN3U3nekKtEIG63Zglnm2bxqTqoMG1LvtMDfpq"], ["created_at", "2017-09-21 17:15:29.186572"], ["updated_at", "2017-09-21 17:15:29.186572"]]
+  [1m[35m (18.7ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 99ms (Views: 1.8ms | ActiveRecord: 24.4ms)
+
+
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"test1", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "test1"], ["password_digest", "$2a$10$W165zVfjYJTK/yT/En4IG.02y5CndedEhIEzNT5AVUeQSNlQPnWq."], ["created_at", "2017-09-21 17:15:29.321010"], ["updated_at", "2017-09-21 17:15:29.321010"]]
+  [1m[35m (23.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 96ms (Views: 1.2ms | ActiveRecord: 24.0ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-21 12:15:57 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"test1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test1"], ["LIMIT", 1]]
+Completed 200 OK in 96ms (Views: 0.8ms | ActiveRecord: 1.2ms)
+
+
+Started POST "//users" for 127.0.0.1 at 2017-09-21 12:16:05 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"test2", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "test2"], ["password_digest", "$2a$10$WFFvzqw05XPUVSBXW9LxNe2TpYlURx5gAOP3prungUSabFqCipjW."], ["created_at", "2017-09-21 17:16:05.969238"], ["updated_at", "2017-09-21 17:16:05.969238"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 70ms (Views: 0.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "//users" for 127.0.0.1 at 2017-09-21 12:16:12 -0500
+Processing by UsersController#index as HTML
+Filter chain halted as :authenticate_token rendered or redirected
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "//users" for 127.0.0.1 at 2017-09-21 12:16:13 -0500
+Processing by UsersController#index as HTML
+Filter chain halted as :authenticate_token rendered or redirected
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-21 12:16:21 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"test2", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test2"], ["LIMIT", 1]]
+Completed 200 OK in 66ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "//users" for 127.0.0.1 at 2017-09-21 12:16:22 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "//users" for 127.0.0.1 at 2017-09-21 12:16:23 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "//users" for 127.0.0.1 at 2017-09-21 12:17:19 -0500
+Processing by UsersController#index as HTML
+Filter chain halted as :authenticate_token rendered or redirected
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "//users" for 127.0.0.1 at 2017-09-21 12:17:20 -0500
+Processing by UsersController#index as HTML
+Filter chain halted as :authenticate_token rendered or redirected
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-21 12:17:24 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 63ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "//users" for 127.0.0.1 at 2017-09-21 12:17:26 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "//users" for 127.0.0.1 at 2017-09-21 12:17:26 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-21 13:52:37 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"test", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test"], ["LIMIT", 1]]
+Completed 200 OK in 69ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-21 13:55:51 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"test", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test"], ["LIMIT", 1]]
+Completed 200 OK in 71ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-21 14:03:59 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"test", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test"], ["LIMIT", 1]]
+Completed 200 OK in 67ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-21 14:05:41 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"test", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test"], ["LIMIT", 1]]
+Completed 200 OK in 70ms (Views: 1.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-21 14:11:35 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 67ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-21 14:12:24 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"broo", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "broo"], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-21 14:13:00 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"bb", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "bb"], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-21 14:14:12 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"bb", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "bb"], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 1.0ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-21 14:16:55 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"asdf", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "asdf"], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-21 14:17:25 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"br", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "br"], ["LIMIT", 1]]
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-21 14:17:33 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 67ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-21 14:17:58 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brr", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brr"], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-21 14:18:04 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 68ms (Views: 1.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-21 14:19:05 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 68ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-21 14:19:44 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 73ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-21 14:36:41 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 82ms (Views: 2.9ms | ActiveRecord: 0.7ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-21 14:50:24 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 72ms (Views: 0.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-21 16:09:42 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"br;lk", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "br;lk"], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-21 16:09:55 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 67ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-21 16:15:22 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 74ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-21 16:23:38 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 71ms (Views: 0.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-21 16:24:43 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 70ms (Views: 0.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-21 16:55:45 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 79ms (Views: 2.8ms | ActiveRecord: 0.7ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-26 00:46:44 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (111.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 655ms (Views: 21.9ms | ActiveRecord: 111.2ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-26 00:50:29 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (122.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 261ms (Views: 13.2ms | ActiveRecord: 122.2ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-26 00:55:50 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brookee", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brookee"], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-26 00:56:01 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 70ms (Views: 0.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-26 00:59:00 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 68ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-26 01:00:48 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 70ms (Views: 0.9ms | ActiveRecord: 0.4ms)
+
+
+  [1m[35m (40.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8687779092913290930)[0m
+  [1m[35m (16.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateData (20170926062520)
+  [1m[35m (40.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (182.7ms)[0m  [1m[35mCREATE TABLE "data" ("id" bigserial primary key, "city" character varying, "state" character varying, "zip" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170926062520"]]
+  [1m[35m (47.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddForeignKeyToData (20170926062807)
+  [1m[35m (40.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "data" ADD "user_id" integer[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170926062807"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(8687779092913290930)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2017-09-26 01:32:17 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/brookebaxa/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/brookebaxa/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (49.3ms)
+Completed 200 OK in 101ms (Views: 54.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2017-09-26 01:32:18 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/data" for 127.0.0.1 at 2017-09-26 01:32:21 -0500
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (40.8ms)[0m  [1m[34mSELECT "data".* FROM "data"[0m
+Completed 200 OK in 114ms (Views: 2.2ms | ActiveRecord: 45.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-09-26 01:32:27 -0500
+Processing by UsersController#index as HTML
+Filter chain halted as :authenticate_token rendered or redirected
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "//users/login" for 127.0.0.1 at 2017-09-26 01:47:25 -0500
+  
+ActionController::RoutingError (undefined method `resources' for ApplicationController:Class):
+  
+app/controllers/application_controller.rb:2:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/users_controller.rb:1:in `<top (required)>'
+Started POST "//users/login" for 127.0.0.1 at 2017-09-26 01:47:32 -0500
+  
+ActionController::RoutingError (undefined method `resources' for ApplicationController:Class):
+  
+app/controllers/application_controller.rb:2:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/users_controller.rb:1:in `<top (required)>'
+Started POST "//users/login" for 127.0.0.1 at 2017-09-26 01:48:33 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 84ms (Views: 0.7ms | ActiveRecord: 5.2ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-26 01:49:04 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 67ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-26 01:53:46 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 64ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-26 01:57:19 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 66ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "//users/1" for 127.0.0.1 at 2017-09-26 01:57:19 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDatum Load (0.5ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 119ms (Views: 7.3ms | ActiveRecord: 3.5ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-26 01:57:38 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 69ms (Views: 0.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "//users/1" for 127.0.0.1 at 2017-09-26 01:57:38 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDatum Load (0.3ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 10ms (Views: 1.3ms | ActiveRecord: 3.2ms)
+
+
+  [1m[35m (32.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (8607.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "voveo-api_development"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (438.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "voveo-api_development"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "voveo-api_test"[0m
+  [1m[35m (2059.6ms)[0m  [1m[35mCREATE DATABASE "voveo-api_development" ENCODING = 'unicode'[0m
+  [1m[35m (708.6ms)[0m  [1m[35mCREATE DATABASE "voveo-api_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (27.8ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "data" CASCADE[0m
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE TABLE "data" ("id" bigserial primary key, "city" character varying, "state" character varying, "zip" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "user_id" integer)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "password_digest" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (29.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170926062807)[0m
+  [1m[35m (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170919162511),
+(20170926062520);
+
+[0m
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (5.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-09-26 06:59:30.594974"], ["updated_at", "2017-09-26 06:59:30.594974"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "data" CASCADE[0m
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "data" ("id" bigserial primary key, "city" character varying, "state" character varying, "zip" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "user_id" integer)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "password_digest" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170926062807)[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170919162511),
+(20170926062520);
+
+[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-09-26 06:59:30.707817"], ["updated_at", "2017-09-26 06:59:30.707817"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "//users/login" for 127.0.0.1 at 2017-09-26 02:00:15 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (42.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 59ms (Views: 0.4ms | ActiveRecord: 44.6ms)
+
+
+Started POST "//users" for 127.0.0.1 at 2017-09-26 02:00:27 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "brooke"], ["password_digest", "$2a$10$gUZ4kJjC9lOKK0s.a4DhM.8T9b0QqtdtTDvwz8BkkDlzJN/KCRwA."], ["created_at", "2017-09-26 07:00:27.204992"], ["updated_at", "2017-09-26 07:00:27.204992"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 116ms (Views: 1.2ms | ActiveRecord: 33.8ms)
+
+
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (281.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "voveo-api_development"[0m
+  [1m[35m (213.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "voveo-api_test"[0m
+  [1m[35m (1894.3ms)[0m  [1m[35mCREATE DATABASE "voveo-api_development" ENCODING = 'unicode'[0m
+  [1m[35m (562.1ms)[0m  [1m[35mCREATE DATABASE "voveo-api_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "data" CASCADE[0m
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "data" ("id" bigserial primary key, "city" character varying, "state" character varying, "zip" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "user_id" integer)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "password_digest" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170926062807)[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170919162511),
+(20170926062520);
+
+[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-09-26 07:00:49.854832"], ["updated_at", "2017-09-26 07:00:49.854832"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "data" CASCADE[0m
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE TABLE "data" ("id" bigserial primary key, "city" character varying, "state" character varying, "zip" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "user_id" integer)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "password_digest" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170926062807)[0m
+  [1m[35m (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170919162511),
+(20170926062520);
+
+[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-09-26 07:00:49.965922"], ["updated_at", "2017-09-26 07:00:49.965922"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "//users" for 127.0.0.1 at 2017-09-26 02:06:59 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (22.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "brooke"], ["password_digest", "$2a$10$vfyj6TLq60sYDZnj8yh05.56cKnV/xPTv9xmzUwL18oD1BJVPzrta"], ["created_at", "2017-09-26 07:07:00.449619"], ["updated_at", "2017-09-26 07:07:00.449619"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 226ms (Views: 1.2ms | ActiveRecord: 150.6ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-26 02:07:08 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 125ms (Views: 0.5ms | ActiveRecord: 5.6ms)
+
+
+Started GET "//users/1" for 127.0.0.1 at 2017-09-26 02:07:08 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDatum Load (34.0ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 92ms (Views: 0.1ms | ActiveRecord: 39.0ms)
+
+
