@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'welcome#index'
   resources :data, only: [:index]
   resources :users do
     resources :data, only: [:create]

@@ -1406,3 +1406,747 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 0.6ms)
 
 
+Started GET "//data" for 127.0.0.1 at 2017-09-26 03:10:02 -0500
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (0.3ms)[0m  [1m[34mSELECT "data".* FROM "data"[0m
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "//users/1/data" for 127.0.0.1 at 2017-09-26 03:18:12 -0500
+Processing by DataController#create as HTML
+  Parameters: {"data"=>{"city"=>"Denver", "state"=>"CO", "zip"=>"80246"}, "user_id"=>"1", "datum"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: datum):
+  
+app/controllers/data_controller.rb:27:in `datum_params'
+app/controllers/data_controller.rb:12:in `create'
+Started POST "//users/1/data" for 127.0.0.1 at 2017-09-26 03:20:04 -0500
+Processing by DataController#create as HTML
+  Parameters: {"data"=>{"city"=>"Denver", "state"=>"CO", "zip"=>"80246"}, "user_id"=>"1", "datum"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: datum):
+  
+app/controllers/data_controller.rb:27:in `datum_params'
+app/controllers/data_controller.rb:12:in `create'
+Started POST "//users/1/data" for 127.0.0.1 at 2017-09-26 03:21:06 -0500
+Processing by DataController#create as HTML
+  Parameters: {"city"=>"Denver", "state"=>"CO", "zip"=>"80246", "user_id"=>"1", "datum"=>{"city"=>"Denver", "state"=>"CO", "zip"=>"80246"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "data" ("city", "state", "zip", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["city", "Denver"], ["state", "CO"], ["zip", "80246"], ["created_at", "2017-09-26 08:21:06.927396"], ["updated_at", "2017-09-26 08:21:06.927396"], ["user_id", 1]]
+  [1m[35m (21.0ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 28ms (Views: 0.8ms | ActiveRecord: 21.7ms)
+
+
+Started GET "//data" for 127.0.0.1 at 2017-09-26 03:21:21 -0500
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (0.3ms)[0m  [1m[34mSELECT "data".* FROM "data"[0m
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "//users/1/data" for 127.0.0.1 at 2017-09-26 03:22:15 -0500
+Processing by DataController#create as HTML
+  Parameters: {"city"=>"Worcester", "state"=>"MA", "zip"=>"01604", "user_id"=>"1", "datum"=>{"city"=>"Worcester", "state"=>"MA", "zip"=>"01604"}}
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "data" ("city", "state", "zip", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["city", "Worcester"], ["state", "MA"], ["zip", "01604"], ["created_at", "2017-09-26 08:22:15.277399"], ["updated_at", "2017-09-26 08:22:15.277399"], ["user_id", 1]]
+  [1m[35m (40.8ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 48ms (Views: 0.7ms | ActiveRecord: 42.1ms)
+
+
+Started GET "//data" for 127.0.0.1 at 2017-09-26 03:22:31 -0500
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (0.4ms)[0m  [1m[34mSELECT "data".* FROM "data"[0m
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-26 03:26:20 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 71ms (Views: 0.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "//users/1" for 127.0.0.1 at 2017-09-26 03:26:20 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDatum Load (1.5ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 1.8ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-26 03:27:56 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 74ms (Views: 0.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "//users/1" for 127.0.0.1 at 2017-09-26 03:27:56 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDatum Load (2.3ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 2.6ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-26 03:29:19 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 68ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "//users/1" for 127.0.0.1 at 2017-09-26 03:29:19 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDatum Load (1.2ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 2.2ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-26 03:31:08 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 67ms (Views: 0.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "//users/1" for 127.0.0.1 at 2017-09-26 03:31:09 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDatum Load (0.3ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-26 03:31:30 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 66ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "//users/1" for 127.0.0.1 at 2017-09-26 03:31:30 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDatum Load (0.2ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "//users/1" for 127.0.0.1 at 2017-09-26 03:32:34 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDatum Load (0.3ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 30ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "//users/1" for 127.0.0.1 at 2017-09-26 03:32:35 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDatum Load (0.2ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "//users/1" for 127.0.0.1 at 2017-09-26 03:32:35 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDatum Load (0.2ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "//users/1" for 127.0.0.1 at 2017-09-26 03:33:06 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDatum Load (0.7ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "//users/1" for 127.0.0.1 at 2017-09-26 03:33:06 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDatum Load (1.1ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "//users/1" for 127.0.0.1 at 2017-09-26 03:33:56 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDatum Load (0.3ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 13ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "//users/1" for 127.0.0.1 at 2017-09-26 03:34:18 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDatum Load (2.5ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 5.1ms)
+
+
+Started GET "//users/1" for 127.0.0.1 at 2017-09-26 03:34:25 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (7.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDatum Load (19.7ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 35ms (Views: 0.2ms | ActiveRecord: 26.7ms)
+
+
+Started GET "//users/1" for 127.0.0.1 at 2017-09-26 03:34:39 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDatum Load (0.5ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "//users/1" for 127.0.0.1 at 2017-09-26 03:34:58 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDatum Load (0.3ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "//users/1" for 127.0.0.1 at 2017-09-26 03:35:10 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDatum Load (0.3ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-26 03:35:57 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 66ms (Views: 1.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "//users/1" for 127.0.0.1 at 2017-09-26 03:35:57 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDatum Load (0.4ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "//users/1" for 127.0.0.1 at 2017-09-26 03:35:57 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDatum Load (0.2ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "//users/1" for 127.0.0.1 at 2017-09-26 03:36:46 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDatum Load (1.0ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 1.2ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-26 03:36:48 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 67ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "//users/1" for 127.0.0.1 at 2017-09-26 03:36:48 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDatum Load (0.3ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "//users/1" for 127.0.0.1 at 2017-09-26 03:37:19 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDatum Load (0.3ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "//users/1" for 127.0.0.1 at 2017-09-26 03:38:37 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDatum Load (0.2ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "//users/1" for 127.0.0.1 at 2017-09-26 03:38:46 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDatum Load (0.2ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "//users/1" for 127.0.0.1 at 2017-09-26 03:41:05 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (8.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDatum Load (0.2ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 13ms (Views: 0.1ms | ActiveRecord: 8.6ms)
+
+
+Started GET "//users/1" for 127.0.0.1 at 2017-09-26 03:41:32 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDatum Load (0.3ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "//users/1" for 127.0.0.1 at 2017-09-26 03:42:27 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDatum Load (0.2ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "//users/1" for 127.0.0.1 at 2017-09-26 03:43:11 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDatum Load (0.2ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "//users/1" for 127.0.0.1 at 2017-09-26 03:43:24 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDatum Load (0.3ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "//users/1" for 127.0.0.1 at 2017-09-26 03:43:42 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDatum Load (0.3ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "//users/1" for 127.0.0.1 at 2017-09-26 03:43:43 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDatum Load (0.2ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "//users/1" for 127.0.0.1 at 2017-09-26 03:45:02 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDatum Load (0.3ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "//users/1" for 127.0.0.1 at 2017-09-26 03:45:55 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDatum Load (0.2ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "//users/1" for 127.0.0.1 at 2017-09-26 03:46:02 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDatum Load (0.3ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "//users/1" for 127.0.0.1 at 2017-09-26 03:46:53 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDatum Load (0.3ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 39ms (Views: 0.2ms | ActiveRecord: 3.9ms)
+
+
+Started GET "//users/1" for 127.0.0.1 at 2017-09-26 03:47:02 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDatum Load (0.2ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "//users/1" for 127.0.0.1 at 2017-09-26 03:47:15 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDatum Load (0.2ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "//users/1" for 127.0.0.1 at 2017-09-26 03:47:55 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDatum Load (0.2ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "//users/1/data" for 127.0.0.1 at 2017-09-26 03:48:29 -0500
+Processing by DataController#create as HTML
+  Parameters: {"city"=>"Denver", "state"=>"CO", "zip"=>"80210", "user_id"=>"1", "datum"=>{"city"=>"Denver", "state"=>"CO", "zip"=>"80210"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "data" ("city", "state", "zip", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["city", "Denver"], ["state", "CO"], ["zip", "80210"], ["created_at", "2017-09-26 08:48:29.233700"], ["updated_at", "2017-09-26 08:48:29.233700"], ["user_id", 1]]
+  [1m[35m (41.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 47ms (Views: 0.4ms | ActiveRecord: 42.3ms)
+
+
+Started GET "//users/1" for 127.0.0.1 at 2017-09-26 03:48:33 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDatum Load (0.2ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "//users/1" for 127.0.0.1 at 2017-09-26 03:49:15 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDatum Load (0.6ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "//users/1" for 127.0.0.1 at 2017-09-26 03:49:28 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDatum Load (0.2ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-26 03:51:16 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 67ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "//users/1" for 127.0.0.1 at 2017-09-26 03:51:16 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDatum Load (0.4ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (41.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (302.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "voveo-api_development"[0m
+  [1m[35m (252.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "voveo-api_test"[0m
+  [1m[35m (2094.3ms)[0m  [1m[35mCREATE DATABASE "voveo-api_development" ENCODING = 'unicode'[0m
+  [1m[35m (591.0ms)[0m  [1m[35mCREATE DATABASE "voveo-api_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "data" CASCADE[0m
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE TABLE "data" ("id" bigserial primary key, "city" character varying, "state" character varying, "zip" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "user_id" integer)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "password_digest" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170926062807)[0m
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170919162511),
+(20170926062520);
+
+[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-09-26 08:51:54.807121"], ["updated_at", "2017-09-26 08:51:54.807121"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "data" CASCADE[0m
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE TABLE "data" ("id" bigserial primary key, "city" character varying, "state" character varying, "zip" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "user_id" integer)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "password_digest" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170926062807)[0m
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170919162511),
+(20170926062520);
+
+[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-09-26 08:51:54.931088"], ["updated_at", "2017-09-26 08:51:54.931088"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "//users/login" for 127.0.0.1 at 2017-09-26 03:52:10 -0500
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (18.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 35ms (Views: 0.3ms | ActiveRecord: 20.4ms)
+
+
+Started POST "//users" for 127.0.0.1 at 2017-09-26 03:52:21 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "brooke"], ["password_digest", "$2a$10$S3s9qh1YmVkmAieMw6vmnOnaN6hjcgz9G9FvTVX/VdDvRY33bMFEy"], ["created_at", "2017-09-26 08:52:21.483270"], ["updated_at", "2017-09-26 08:52:21.483270"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 145ms (Views: 1.0ms | ActiveRecord: 64.4ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-26 03:52:29 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 107ms (Views: 0.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "//users/1" for 127.0.0.1 at 2017-09-26 03:52:29 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDatum Load (18.9ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 54ms (Views: 0.1ms | ActiveRecord: 21.8ms)
+
+
+Started POST "//users/1/data" for 127.0.0.1 at 2017-09-26 03:52:55 -0500
+Processing by DataController#create as HTML
+  Parameters: {"city"=>"Denver", "state"=>"CO", "zip"=>"80210", "user_id"=>"1", "datum"=>{"city"=>"Denver", "state"=>"CO", "zip"=>"80210"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "data" ("city", "state", "zip", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["city", "Denver"], ["state", "CO"], ["zip", "80210"], ["created_at", "2017-09-26 08:52:55.177547"], ["updated_at", "2017-09-26 08:52:55.177547"], ["user_id", 1]]
+  [1m[35m (40.2ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 96ms (Views: 0.5ms | ActiveRecord: 43.4ms)
+
+
+Started GET "//users/1" for 127.0.0.1 at 2017-09-26 03:52:57 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDatum Load (0.4ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "//users/1" for 127.0.0.1 at 2017-09-26 03:55:37 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDatum Load (0.2ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "//users/1" for 127.0.0.1 at 2017-09-26 03:56:52 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDatum Load (0.3ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "//users/login" for 127.0.0.1 at 2017-09-26 03:57:04 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"brooke", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "brooke"], ["LIMIT", 1]]
+Completed 200 OK in 67ms (Views: 0.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "//users/1" for 127.0.0.1 at 2017-09-26 03:57:04 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDatum Load (0.3ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "//users/1" for 127.0.0.1 at 2017-09-26 03:58:18 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDatum Load (0.3ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "//users/1/data" for 127.0.0.1 at 2017-09-26 04:07:35 -0500
+Processing by DataController#create as HTML
+  Parameters: {"city"=>"Grand Island", "state"=>"NE", "zip"=>"68801", "user_id"=>"1", "datum"=>{"city"=>"Grand Island", "state"=>"NE", "zip"=>"68801"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "data" ("city", "state", "zip", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["city", "Grand Island"], ["state", "NE"], ["zip", "68801"], ["created_at", "2017-09-26 09:07:35.448473"], ["updated_at", "2017-09-26 09:07:35.448473"], ["user_id", 1]]
+  [1m[35m (39.9ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 48ms (Views: 0.6ms | ActiveRecord: 41.3ms)
+
+
+Started POST "//users/1/data" for 127.0.0.1 at 2017-09-26 04:07:52 -0500
+Processing by DataController#create as HTML
+  Parameters: {"city"=>"Grand Island", "state"=>"NE", "zip"=>"68801", "user_id"=>"1", "datum"=>{"city"=>"Grand Island", "state"=>"NE", "zip"=>"68801"}}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (4.0ms)[0m  [1m[32mINSERT INTO "data" ("city", "state", "zip", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["city", "Grand Island"], ["state", "NE"], ["zip", "68801"], ["created_at", "2017-09-26 09:07:52.794147"], ["updated_at", "2017-09-26 09:07:52.794147"], ["user_id", 1]]
+  [1m[35m (82.1ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 95ms (Views: 0.4ms | ActiveRecord: 88.2ms)
+
+
+Started POST "//users/1/data" for 127.0.0.1 at 2017-09-26 04:08:23 -0500
+Processing by DataController#create as HTML
+  Parameters: {"city"=>"Grand Island", "state"=>"NE", "zip"=>"68801", "user_id"=>"1", "datum"=>{"city"=>"Grand Island", "state"=>"NE", "zip"=>"68801"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "data" ("city", "state", "zip", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["city", "Grand Island"], ["state", "NE"], ["zip", "68801"], ["created_at", "2017-09-26 09:08:23.551094"], ["updated_at", "2017-09-26 09:08:23.551094"], ["user_id", 1]]
+  [1m[35m (47.8ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 56ms (Views: 0.7ms | ActiveRecord: 48.7ms)
+
+
+Started POST "//users/1/data" for 127.0.0.1 at 2017-09-26 04:08:53 -0500
+Processing by DataController#create as HTML
+  Parameters: {"city"=>"Grand Island", "state"=>"NE", "zip"=>"68801", "user_id"=>"1", "datum"=>{"city"=>"Grand Island", "state"=>"NE", "zip"=>"68801"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "data" ("city", "state", "zip", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["city", "Grand Island"], ["state", "NE"], ["zip", "68801"], ["created_at", "2017-09-26 09:08:53.354837"], ["updated_at", "2017-09-26 09:08:53.354837"], ["user_id", 1]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 6ms (Views: 0.6ms | ActiveRecord: 1.9ms)
+
+
+Started POST "//users/1/data" for 127.0.0.1 at 2017-09-26 04:09:09 -0500
+Processing by DataController#create as HTML
+  Parameters: {"city"=>"Grand Island", "state"=>"NE", "zip"=>"68801", "user_id"=>"1", "datum"=>{"city"=>"Grand Island", "state"=>"NE", "zip"=>"68801"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "data" ("city", "state", "zip", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["city", "Grand Island"], ["state", "NE"], ["zip", "68801"], ["created_at", "2017-09-26 09:09:09.851137"], ["updated_at", "2017-09-26 09:09:09.851137"], ["user_id", 1]]
+  [1m[35m (80.0ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 90ms (Views: 0.4ms | ActiveRecord: 81.1ms)
+
+
+Started POST "//users/1/data" for 127.0.0.1 at 2017-09-26 04:09:35 -0500
+Processing by DataController#create as HTML
+  Parameters: {"city"=>"Grand Island", "state"=>"NE", "zip"=>"68801", "user_id"=>"1", "datum"=>{"city"=>"Grand Island", "state"=>"NE", "zip"=>"68801"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "data" ("city", "state", "zip", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["city", "Grand Island"], ["state", "NE"], ["zip", "68801"], ["created_at", "2017-09-26 09:09:35.030305"], ["updated_at", "2017-09-26 09:09:35.030305"], ["user_id", 1]]
+  [1m[35m (23.6ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 32ms (Views: 0.5ms | ActiveRecord: 25.0ms)
+
+
+Started POST "//users/1/data" for 127.0.0.1 at 2017-09-26 04:11:07 -0500
+Processing by DataController#create as HTML
+  Parameters: {"city"=>"Grand Island", "state"=>"NE", "zip"=>"68801", "user_id"=>"1", "datum"=>{"city"=>"Grand Island", "state"=>"NE", "zip"=>"68801"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (33.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "data" ("city", "state", "zip", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["city", "Grand Island"], ["state", "NE"], ["zip", "68801"], ["created_at", "2017-09-26 09:11:07.155856"], ["updated_at", "2017-09-26 09:11:07.155856"], ["user_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 42ms (Views: 0.5ms | ActiveRecord: 34.9ms)
+
+
+Started POST "//users/1/data" for 127.0.0.1 at 2017-09-26 04:14:08 -0500
+Processing by DataController#create as HTML
+  Parameters: {"city"=>"Grand Island", "state"=>"NE", "zip"=>"68801", "user_id"=>"1", "datum"=>{"city"=>"Grand Island", "state"=>"NE", "zip"=>"68801"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "data" ("city", "state", "zip", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["city", "Grand Island"], ["state", "NE"], ["zip", "68801"], ["created_at", "2017-09-26 09:14:08.340448"], ["updated_at", "2017-09-26 09:14:08.340448"], ["user_id", 1]]
+  [1m[35m (40.8ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 47ms (Views: 0.4ms | ActiveRecord: 41.5ms)
+
+
+Started POST "//users/1/data" for 127.0.0.1 at 2017-09-26 04:16:40 -0500
+Processing by DataController#create as HTML
+  Parameters: {"city"=>"Grand Island", "state"=>"NE", "zip"=>"68801", "user_id"=>"1", "datum"=>{"city"=>"Grand Island", "state"=>"NE", "zip"=>"68801"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "data" ("city", "state", "zip", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["city", "Grand Island"], ["state", "NE"], ["zip", "68801"], ["created_at", "2017-09-26 09:16:40.983253"], ["updated_at", "2017-09-26 09:16:40.983253"], ["user_id", 1]]
+  [1m[35m (41.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 48ms (Views: 0.5ms | ActiveRecord: 42.2ms)
+
+
+Started POST "//users/1/data" for 127.0.0.1 at 2017-09-26 04:17:18 -0500
+Processing by DataController#create as HTML
+  Parameters: {"city"=>"Grand Island", "state"=>"NE", "zip"=>"68801", "user_id"=>"1", "datum"=>{"city"=>"Grand Island", "state"=>"NE", "zip"=>"68801"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "data" ("city", "state", "zip", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["city", "Grand Island"], ["state", "NE"], ["zip", "68801"], ["created_at", "2017-09-26 09:17:18.997258"], ["updated_at", "2017-09-26 09:17:18.997258"], ["user_id", 1]]
+  [1m[35m (40.0ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 50ms (Views: 0.9ms | ActiveRecord: 41.1ms)
+
+
+Started POST "//users/1/data" for 127.0.0.1 at 2017-09-26 04:19:38 -0500
+Processing by DataController#create as HTML
+  Parameters: {"city"=>"Grand Island", "state"=>"NE", "zip"=>"68801", "user_id"=>"1", "datum"=>{"city"=>"Grand Island", "state"=>"NE", "zip"=>"68801"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "data" ("city", "state", "zip", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["city", "Grand Island"], ["state", "NE"], ["zip", "68801"], ["created_at", "2017-09-26 09:19:38.905230"], ["updated_at", "2017-09-26 09:19:38.905230"], ["user_id", 1]]
+  [1m[35m (40.0ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 47ms (Views: 0.7ms | ActiveRecord: 40.6ms)
+
+
+Started POST "//users/1/data" for 127.0.0.1 at 2017-09-26 04:20:32 -0500
+Processing by DataController#create as HTML
+  Parameters: {"city"=>"Grand Island", "state"=>"NE", "zip"=>"68801", "user_id"=>"1", "datum"=>{"city"=>"Grand Island", "state"=>"NE", "zip"=>"68801"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "data" ("city", "state", "zip", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["city", "Grand Island"], ["state", "NE"], ["zip", "68801"], ["created_at", "2017-09-26 09:20:32.803208"], ["updated_at", "2017-09-26 09:20:32.803208"], ["user_id", 1]]
+  [1m[35m (40.2ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 52ms (Views: 1.0ms | ActiveRecord: 42.4ms)
+
+
+Started POST "//users/1/data" for 127.0.0.1 at 2017-09-26 04:21:19 -0500
+Processing by DataController#create as HTML
+  Parameters: {"city"=>"Grand Island", "state"=>"NE", "zip"=>"68801", "user_id"=>"1", "datum"=>{"city"=>"Grand Island", "state"=>"NE", "zip"=>"68801"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "data" ("city", "state", "zip", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["city", "Grand Island"], ["state", "NE"], ["zip", "68801"], ["created_at", "2017-09-26 09:21:19.953615"], ["updated_at", "2017-09-26 09:21:19.953615"], ["user_id", 1]]
+  [1m[35m (40.4ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 46ms (Views: 0.5ms | ActiveRecord: 41.0ms)
+
+
+Started GET "//users/1" for 127.0.0.1 at 2017-09-26 09:42:32 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDatum Load (0.5ms)[0m  [1m[34mSELECT "data".* FROM "data" WHERE "data"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 28ms (Views: 1.3ms | ActiveRecord: 1.3ms)
+
+
+Started POST "//users/1/data" for 127.0.0.1 at 2017-09-26 10:05:27 -0500
+Processing by DataController#create as HTML
+  Parameters: {"city"=>"Denver", "state"=>"CO", "zip"=>"80246", "user_id"=>"1", "datum"=>{"city"=>"Denver", "state"=>"CO", "zip"=>"80246"}}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "data" ("city", "state", "zip", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["city", "Denver"], ["state", "CO"], ["zip", "80246"], ["created_at", "2017-09-26 15:05:27.750348"], ["updated_at", "2017-09-26 15:05:27.750348"], ["user_id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 38ms (Views: 2.1ms | ActiveRecord: 4.4ms)
+
+
