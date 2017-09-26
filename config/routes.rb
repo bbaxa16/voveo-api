@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  resources :data
+  resources :data, only: [:index]
   resources :users do
+    resources :data, only: [:create]
     collection do
       post '/login', to: 'users#login'
     end
